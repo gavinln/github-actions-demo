@@ -17,6 +17,10 @@ black:  ## reformat Python code with black
 pre-commit:  ## run pre-commit on all files
 	pre-commit run --all-files --color=never
 
+.PHONY: gh-watch
+gh-watch:  ## watch github action
+	gh run watch
+
 .PHONY: pre-commit-file
 pre-commit-file:  ## pre-commit for a single file: pre-commit-file fl=<file>
 	@test -n "$(fl)" || { echo "fl= not specified"; exit 1; }
