@@ -8,5 +8,5 @@ def test_sum_int():
 
 def test_sum_float():
     values = list(range(10))
-    values = [value * 0.3 for value in values]
+    values = [value / 3 for value in values]
     assert abs(numpy_op.sum(values) - sum(values)) < 1e-6
